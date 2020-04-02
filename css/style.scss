@@ -1,0 +1,283 @@
+html{
+    font-size: 62.5%;
+
+    .ja{
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .en{
+        font-family: 'Noto Serif', serif;
+    }
+
+    body{
+
+        header{
+            position: relative;
+
+            .top{
+                display: flex;
+                height: 96px;
+                width: 100%;
+                justify-content: space-between;
+                color: #ffffff;
+                position: fixed;
+                z-index: 10;
+                .title{
+                    font-weight: 2.6rem;
+                    margin:30px 0 0 120px ;
+                    font-size: 2.6rem;
+                }
+
+                nav{
+                    margin:30px 120px 0 auto;
+                    ul{
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            list-style: none;
+                            display: inline-block;
+                            font-size: 1.6rem;
+                            margin-left: 30px;
+                        }
+                    }
+                }
+
+            } //top
+
+            .slider{
+                overflow: hidden;
+
+                .slider-wrap{
+                    width: 300%;
+                    display: flex;
+                    animation:20s slider  infinite;
+
+                    @keyframes slider {
+                        0%{transform: translateX(0%);}
+                        25%{transform: translateX(0%);}
+                        33%{transform:translateX(-33.3%);}
+                        58%{transform:translateX(-33.3%);}
+                        66%{transform:translateX(-66.66%);}
+                        92%{transform:translateX(-66.66%);}
+                        100%{transform:translateX(0%);}
+
+                    }
+
+                    :nth-child(1){
+                        background: url("../img/fv-bgi_01@2x.jpg") no-repeat;
+                    }
+
+                    :nth-child(2){
+                        background: url("../img/fv-bgi_02@2x.jpg") no-repeat;
+
+                    }
+
+                    :nth-child(3){
+                        background: url("../img/fv-bgi_03@2x.jpg") no-repeat;
+
+                    }
+
+                    .flex-item{
+                        width: 100vw;
+                        height: 100vh;
+                        background-size: cover;
+                        background-position: 50%;
+
+                    } //flex-item
+
+                } //slider-wrap
+
+            } //slider
+
+            .mess{
+                position: absolute;
+                top: 54%;
+                left: 8%;
+                color: #ffffff;
+                letter-spacing: 0.05em;
+
+                h1{
+                    font-size: 7.0rem;
+                    font-weight: bold;
+                    letter-spacing: 0.05em;
+
+                }
+
+                h2{
+                    font-size: 4.0rem;
+                    text-indent: 1.0em;
+                }
+            }
+
+        } //header
+
+        .main{
+
+            .left{
+            margin:0 auto 0 15%;
+            }
+            
+            .right{
+                margin:0 15% 0 auto;
+                text-align: right;   
+                color: #fff;
+            }
+
+            .gray{
+                color:#f5f5f5;
+                font-size: 9.0rem;
+                margin-top: 70px;
+            }
+
+            .gray2{
+                color:#696969;
+                font-size: 9.0rem;
+                margin-top: 70px;
+            }
+
+            .button{
+                background: #F7D43F;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 235px;
+                height: 60px;
+                border-radius: 50px;
+                font-size: 1.6rem;
+                margin: 80px auto 0 auto;
+            }
+
+
+            .item{
+                padding: 100px 0 70px 0;
+            }
+
+            h3{
+                font-size: 6rem;
+                
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 2px;
+                    width: 200px;
+                    margin-left:32px ;
+                    background: #000;
+                    }
+
+                    &.white:after{
+                        background: #fff;
+                    
+                    }
+        
+    
+            } //h3
+
+            .concept{
+            
+                .will{
+                    font-size: 3.0rem;
+                    line-height: 1.5em;
+                    text-align: center;
+                    margin-top: 70px;
+            
+                }
+
+                .flex{
+                    display: flex;
+                    width: 70%;
+                    margin: 60px auto 0 auto;
+                    p{
+                        font-size: 1.6rem;
+                        margin-right: 120px;
+                    }
+                }
+            } //concept
+
+            .works{
+                background: url("../img/works-bgi@2x.jpg") no-repeat;
+                background-size:cover ;
+                .flex{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 80px;
+
+                    :nth-child(1){
+                        margin-left: 0;
+                    }
+
+                    div{
+                        width: 320px;
+                        background:#fff;
+                        margin-left: 20px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+
+                    p{
+                        padding: 25px 20px;
+                        font-size: 1.6rem;
+                    }
+                }
+            } //works
+
+            .service{
+                .flex{
+                    display: flex;
+                    margin-top: 80px;
+                    div{
+                        width: 33.3%;
+                        position: relative;
+                        :hover{
+                            filter:brightness(30%);
+                            transition: 0.5s;
+                        }
+                        img{
+                            width: 100%;
+                        }
+
+                        p{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(-50%);
+                            color: #ffffff;
+                            font-size: 4.0rem;
+                            margin: 0;
+                        }
+
+                        
+                    }
+                }
+            } //service
+
+            .contact{
+                background: url("../img/contact-bgi@2x.jpg") no-repeat;
+                background-size:cover ;
+
+                p{
+                    text-align: center;
+                    font-size: 1.6rem;
+                    color: #ffffff;
+                    margin-top: 80px;
+                }
+
+                .button{
+                    margin-top: 40px;
+                }
+            }
+
+        } //main
+
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            font-size: 1.4rem;
+        }
+
+    } //body
+
+} //html
