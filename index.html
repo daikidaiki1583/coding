@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -28,7 +30,15 @@
         </div>
 
         <script>
-            
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    if($(window).scrollTop()>900){
+                        $('.top').addClass('color');
+                    }else{
+                        $('.top').removeClass('color');
+                    }
+                })
+            });            
         </script>
 
         <div class="slider">
