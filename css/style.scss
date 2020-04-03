@@ -22,6 +22,12 @@ html{
                 color: #ffffff;
                 position: fixed;
                 z-index: 10;
+
+                &.color{
+                    background: #282F35;
+                    transition: 0.3s;
+                }    
+
                 .title{
                     font-weight: 2.6rem;
                     margin:30px 0 0 120px ;
