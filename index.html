@@ -18,6 +18,29 @@
         <div class="top en">
             <div class="title">Cresta Design</div>
 
+            <div id="humberger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    $('#humberger').click(function(){
+                        if($('#humberger').hasClass('open')){
+                            $('nav').removeClass('open');
+                            $('#humberger').removeClass('open');
+
+                        }else{
+                            $('nav').addClass('open');
+                            $('#humberger').addClass('open');
+
+                        }
+                        
+                    });
+                });
+            </script>
+
             <nav>
                 <ul>
                     <li>Concept</li>
@@ -27,12 +50,13 @@
                 </ul>
             </nav>
 
+            
         </div>
 
-        <script>
+        <script class="pc-animation">
             $(document).ready(function(){
                 $(window).scroll(function(){
-                    if($(window).scrollTop()>900){
+                    if($(window).scrollTop()>800){
                         $('.top').addClass('color');
                     }else{
                         $('.top').removeClass('color');
@@ -51,7 +75,7 @@
 
         <div class="mess">
             <h1 class="en">Design for smile</h1>
-            <h2 class="ja">快適なオフィスをデザインする</h2>
+            <h2 class="ja">快適なオフィスを<br>デザインする</h2>
         </div>
 
     </header>

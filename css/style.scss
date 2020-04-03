@@ -23,6 +23,10 @@ html{
                 position: fixed;
                 z-index: 10;
 
+                #humberger{
+                    display: none;
+                }
+
                 &.color{
                     background: #282F35;
                     transition: 0.3s;
@@ -112,6 +116,10 @@ html{
                 h2{
                     font-size: 4.0rem;
                     text-indent: 1.0em;
+
+                    br{
+                        display: none;
+                    }
                 }
             }
 
@@ -287,3 +295,259 @@ html{
     } //body
 
 } //html
+
+@media (max-width:784px){
+
+        html{
+            body{
+
+                header{
+
+                    .top{
+
+                        .title{
+                            margin: 30px 0 0 5%;
+                        }
+
+
+                        nav{
+                            opacity: 0;
+                            display: none;
+                            height: 100vh;
+                            width: 100%;
+                            margin: 0;
+                            transition: 0.3s;
+                            &.open{
+                                display: block;
+                                position: fixed;
+                                top:0;
+                                z-index: 500;
+                                opacity: 1;
+                                background-color:#282F35 ;
+                                transition: 0.3s;
+                            }
+                            
+                            ul{
+                                text-align: center;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 100%;
+                                li{
+                                    font-size: 2.0rem;
+                                    margin-bottom: 30px;
+                                    margin-left: 0;
+                                    display: block;
+                                    
+                                }
+                            }
+
+                        }
+
+                        #humberger{
+                            display: block;
+                            height: 30px;
+                            width: 30px;
+                            position: absolute;
+                            top: 30px;
+                            right: 5%;
+                            transition: 0.3s;
+
+
+                            :nth-child(1){
+                                top:0;
+                                transition: 0.3s;
+                            }
+
+                            :nth-child(2){
+                                top:10px;
+                                transition: 0.3s;
+                            }
+
+                            :nth-child(3){
+                                top: 20px;
+                                transition: 0.3s;
+                            }
+
+                            &.open{
+                                z-index: 1000;
+                                :nth-child(1){
+                                    top:10px;
+                                    transform: rotate(45deg);
+                                    transition: 0.3s;
+                                }
+    
+                                :nth-child(2){
+                                    top:10px;
+                                    display: none;
+                                    transition: 0.3s;
+                                    
+                                }
+    
+                                :nth-child(3){
+                                    top: 10px;
+                                    transform: rotate(-45deg);
+                                    transition: 0.3s;
+
+                                }
+    
+                            }
+
+
+
+                            span{
+                                display: inline-block;
+                                width: 30px;
+                                height: 3px;
+                                position: absolute;
+                                background: #fff;
+                            }
+
+                        } //humberger
+
+                        .slider{
+            
+                            .slider-wrap{
+                                :nth-child(3){
+                                    background: url("../img/fv-bgi_03@2x.jpg") no-repeat;
+                                    background-position: 50%;
+            
+                                }
+            
+                            }
+                        
+                        }
+                                
+                    } //top
+
+                    .mess{
+                        width: 100%;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+
+                        h1{
+                            font-size: 4.0rem;
+                            text-align: center;
+                        }
+
+                        h2{
+                            font-size: 3.0rem;
+                            text-align: center;
+                            br{
+                                display: block;
+                            }
+                        }
+                    }
+
+
+                } //header
+
+                
+                .main{
+
+                    .item{
+                        padding-bottom: 40px;
+
+                        h3{
+                            font-size: 3.0rem;
+
+                            &:after{
+                                width: 25%;
+                            }
+                        }
+
+                        .left{
+                            margin-left: 4%;
+                        }
+
+                        .right{
+                            margin-right: 4%;
+                        }
+
+                        .gray{
+                            margin:40px 4% 0 0;
+                            font-size: 4.0rem;
+                        }
+
+                        .gray2{
+                            margin:40px 0 0 4%;
+                            font-size: 4.0rem;
+                        }
+
+
+                    } //item
+
+                    .concept{
+
+                        .will{
+                            font-size: 2.0rem;
+                            width: 80%;
+                            margin: 50px auto 0 auto;
+
+                            br{
+                                display: none;
+                            }
+                        }
+
+                        .flex{
+                            margin: 0 ;
+                            padding: 0 4%;
+                            width: 100%;
+                            flex-direction: column;
+                            box-sizing: border-box;
+
+                            p{
+                                margin: 30px 0 0 0;
+                                line-height: 2;
+                                
+                            }
+
+                            div{
+                                margin-top: 60px;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+
+                        } //flex
+                    } //concept
+
+                    .works{
+
+                        .flex{
+                            margin-top: 40px;
+                            padding: 0 5%;
+                            flex-direction: column;
+
+
+                            div{
+                                width: 100%;
+                                margin:30px 0 0 0;
+                                }        
+        
+                        }
+                    } //works
+
+                    .service{
+
+                        .flex{
+                            flex-direction: column;
+                            margin-top: 30px;
+
+                            div{
+                                width: 100%;
+                                margin-top: 30px;
+                                p{
+                                    text-align: center;
+                                    font-size: 2.0rem;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    } //service
+
+                }
+            }
+        }    
+}
